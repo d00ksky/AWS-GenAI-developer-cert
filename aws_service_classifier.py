@@ -30,7 +30,7 @@ def get_cost_related_services(services: list[Service]) -> list[Service]:
 
 def sort_services_by_name(services: list[Service]) -> list[Service]:
     # TODO: posortuj usługi alfabetycznie po name
-    pass
+    return sorted(services, key = lambda service: service["name"])
 
 
 def print_services(title: str, services: list[Service]) -> None:
