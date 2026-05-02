@@ -8,7 +8,7 @@ def filter_services_by_category(
     services: list[Service],
     category: str,
 ) -> list[Service]:
-    # TODO: zwróć tylko te usługi, które mają daną kategorię
+    # zwróć tylko te usługi, które mają daną kategorię
     service_with_category = []
     for service in services:
         if service["category"] == category:
@@ -17,8 +17,6 @@ def filter_services_by_category(
 
 
 def get_cost_related_services(services: list[Service]) -> list[Service]:
-    # TODO: zwróć usługi, które są związane z kosztami
-    # Warunek:
     # - category == "cost"
     # - albo "cost" znajduje się w risk
     cost_related_service = []
@@ -29,15 +27,16 @@ def get_cost_related_services(services: list[Service]) -> list[Service]:
     
 
 def sort_services_by_name(services: list[Service]) -> list[Service]:
-    # TODO: posortuj usługi alfabetycznie po name
+    # posortuj usługi alfabetycznie po name
     return sorted(services, key = lambda service: service["name"])
 
 
 def print_services(title: str, services: list[Service]) -> None:
-    # TODO:
     # 1. wypisz tytuł
     # 2. dla każdej usługi wypisz "- NAME: RISK"
-    pass
+    print(f"\n{title}")
+    for service in services:
+        print(f"- {service["name"]}: {service["risk"]}")
 
 
 def main() -> None:
@@ -58,6 +57,8 @@ def main() -> None:
 
     print("\nAll services sorted by name:")
     # TODO: wypisz same nazwy usług z sorted_services
+    for service in sorted_services:
+        print(service["name"])
 
 
 if __name__ == "__main__":
