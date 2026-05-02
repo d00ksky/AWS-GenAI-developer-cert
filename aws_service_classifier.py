@@ -21,8 +21,12 @@ def get_cost_related_services(services: list[Service]) -> list[Service]:
     # Warunek:
     # - category == "cost"
     # - albo "cost" znajduje się w risk
-    pass
-
+    cost_related_service = []
+    for service in services:
+        if service["category"] == "cost" or "cost" in service["risk"]:
+            cost_related_service.append(service)
+    return cost_related_service
+    
 
 def sort_services_by_name(services: list[Service]) -> list[Service]:
     # TODO: posortuj usługi alfabetycznie po name
