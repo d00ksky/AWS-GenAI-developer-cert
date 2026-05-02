@@ -36,7 +36,7 @@ def print_services(title: str, services: list[Service]) -> None:
     # 2. dla każdej usługi wypisz "- NAME: RISK"
     print(f"\n{title}")
     for service in services:
-        print(f"- {service["name"]}: {service["risk"]}")
+        print(f"- {service['name']}: {service['risk']}")
 
 
 def main() -> None:
