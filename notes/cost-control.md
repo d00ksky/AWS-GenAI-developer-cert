@@ -20,3 +20,24 @@
 ### Cleanup steps
 
 ### Verification after cleanup
+
+## High-risk services
+
+- Amazon Bedrock model calls
+- Embeddings
+- Bedrock Knowledge Bases
+- OpenSearch Serverless
+- CloudWatch Logs
+- Provisioned throughput
+- Agents/tool loops
+
+## Mandatory lab checklist
+
+Before every lab:
+
+- [ ] One AWS Region selected
+- [ ] AWS Budget configured
+- [ ] Token/request limit defined
+- [ ] Cleanup steps written
+- [ ] No provisioned throughput unless explicitly justified
+- [ ] No OpenSearch Serverless unless explicitly justified

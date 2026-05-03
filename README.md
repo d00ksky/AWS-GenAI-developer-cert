@@ -1,7 +1,5 @@
 # AWS-GenAI-developer-cert
 
-# aws-bedrock-rag-lab
-
 Hands-on learning repo for AWS Certified Generative AI Developer - Professional.
 
 ## Goal
