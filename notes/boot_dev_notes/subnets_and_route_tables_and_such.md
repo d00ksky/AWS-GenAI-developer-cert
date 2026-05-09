@@ -15,3 +15,10 @@ A route that tells servers in these subnets to use that IGW
 After attaching IGW we need route that are named route tables.
 This lets us create rules for things we care about like local traffic.
 If we don't have specific rule for something we send it to the internet.
+
+---
+
+A private subnet is a subnet whose resources are not accessible from the internet directly, but can still have some internet connectivity.
+
+We could use firewall but better approach is with many layers of security.
+One good option for that is nat (network address translation) which lets us keep a subnet private but still allow outbound access when we need it.
